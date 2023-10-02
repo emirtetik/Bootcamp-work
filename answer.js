@@ -974,25 +974,26 @@ const productsStartWithA = products.filter(
   (product) => product.name.charAt(0).toLowerCase() === "a"
 );
 console.log(productsStartWithA);
+
 //ismi a harfi ile BİTEN ürünleri console a yazdır
 const productsEndingWithA = products.filter(
   (product) =>
     product.name.charAt(product.name.length - 1).toLowerCase() === "a"
 );
 console.log(productsEndingWithA);
+
 // id si 10 olan ürünün adını console a yazdır
 const productWithId10 = products.find((product) => product.id === 10);
 if (productWithId10) {
   console.log(productWithId10.name);
-} else {
-  console.log("ID 10 olan ürün bulunamadı.");
-}
+} 
+
 //discontinued false olan kaç ürün var
 const activeProducts = products.filter((product) => !product.discontinued);
 console.log(activeProducts.length);
+
 // en pahalı ürünün adını console a yazdır
 // //en ucuz ürünün adını console a yazdır
-
 let expensiveProduct = products[0];
 let cheapProduct = products[0];
 
