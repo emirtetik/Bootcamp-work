@@ -999,7 +999,7 @@ console.log(activeProducts.length);
 let expensiveProduct = products[0];
 let cheapProduct = products[0];
 
-for (let i = 1; i < products.length; i++) {
+for (let i = 0; i < products.length; i++) {
   if (products[i].unitPrice > expensiveProduct.unitPrice) {
     expensiveProduct = products[i];
   }
