@@ -971,9 +971,20 @@ console.log(productsRange.length);
 
 //ismi a harfi ile başlayan ürünleri console a yazdır
 const productsStartWithA = products
-  .filter((product) => product.name.charAt(0).toLowerCase() === "a")
+  .filter((product) => product.name.startsWith("a"))
   .map((product) => product.name);
-console.log(productsStartWithA);
+  
+  if (productsStartWithA.length > 0) {
+    console.log(productsStartWithA);
+  } else {
+    console.log("Bulunamadı");
+  }
+// ===================================================================
+const productsStartBigA = products
+  .filter((product) => product.name.toLowerCase().startsWith("a"))
+  .map((product) => product.name);
+console.log(productsStartBigA);
+
 
 //ismi a harfi ile BİTEN ürünleri console a yazdır
 const productsEndingWithA = products
