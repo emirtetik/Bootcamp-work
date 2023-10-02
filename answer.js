@@ -970,23 +970,25 @@ const productsRange = products.filter(
 console.log(productsRange.length);
 
 //ismi a harfi ile başlayan ürünleri console a yazdır
-const productsStartWithA = products.filter(
-  (product) => product.name.charAt(0).toLowerCase() === "a"
-);
+const productsStartWithA = products
+  .filter((product) => product.name.charAt(0).toLowerCase() === "a")
+  .map((product) => product.name);
 console.log(productsStartWithA);
 
 //ismi a harfi ile BİTEN ürünleri console a yazdır
-const productsEndingWithA = products.filter(
-  (product) =>
-    product.name.charAt(product.name.length - 1).toLowerCase() === "a"
-);
+const productsEndingWithA = products
+  .filter(
+    (product) =>
+      product.name.charAt(product.name.length - 1).toLowerCase() === "a"
+  )
+  .map((product) => product.name);
 console.log(productsEndingWithA);
 
 // id si 10 olan ürünün adını console a yazdır
 const productWithId10 = products.find((product) => product.id === 10);
 if (productWithId10) {
   console.log(productWithId10.name);
-} 
+}
 
 //discontinued false olan kaç ürün var
 const activeProducts = products.filter((product) => !product.discontinued);
